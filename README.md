@@ -1,22 +1,24 @@
-LLServer
+ï»¿LLServer
 ========
 
 A nosql database base on libevent,leveldb.support memcached protocal.
 
-LLServer 1.0 is a high-performance, distributed string store system.it support http , memcached protocal, base on libevent, leveldb project. LLServerÊÇ±¾ÈË»ùÓÚlibeventºÍleveldbÕâÁ½¸ö¿ªÔ´Èí¼ş£¬¿ª·¢µÄÇáÁ¿¼¶Êı¾İ´æ´¢·şÎñÆ÷Èí¼ş£¬½èÖúlibevent¸ßĞ§ÍøÂç½Ó¿ÚÊµÏÖ¶ÔleveldbµÄ·ÃÎÊ·â×°¡£ 
+LLServer 1.0 is a high-performance, distributed string store system.it support http , memcached protocal, base on libevent, leveldb project. 
 
-ÏîÄ¿ÍøÖ·£ºhttp://code.google.com/p/llserver/ ¡¡ 
-Ê¹ÓÃ»·¾³£ºLinux ¡¡ 
-×÷Õß£º´úÕğ¾ü ¡¡ 
-Ä¿Ç°·¢²¼°æ±¾£º1.0 
+LLServeræ˜¯æœ¬äººåŸºäºlibeventå’Œleveldbè¿™ä¸¤ä¸ªå¼€æºè½¯ä»¶ï¼Œå¼€å‘çš„è½»é‡çº§æ•°æ®å­˜å‚¨æœåŠ¡å™¨è½¯ä»¶ï¼Œå€ŸåŠ©libeventé«˜æ•ˆç½‘ç»œæ¥å£å®ç°å¯¹leveldbçš„è®¿é—®å°è£…ã€‚ 
 
-¡¡ Ö§³ÖhttpĞ­ÒéºÍmemcachedĞ­Òé¡£Ò²¾ÍÊÇ¿ÉÒÔÍ¨¹ıä¯ÀÀÆ÷»òÏÖÓĞµÄmemcached¿Í»§¶ËÀ´½øĞĞÊı¾İµÄCURD²Ù×÷¡£ 
+é¡¹ç›®ç½‘å€ï¼šhttp://code.google.com/p/llserver/ ã€€ 
+ä½¿ç”¨ç¯å¢ƒï¼šLinux ã€€ 
+ä½œè€…ï¼šä»£éœ‡å†› ã€€ 
+ç›®å‰å‘å¸ƒç‰ˆæœ¬ï¼š1.0 
 
-ÏÂÃæ¼òµ¥½éÉÜÒ»ÏÂÈçºÎ°²×°Ê¹ÓÃLLServer¡£ 
+ã€€ æ”¯æŒhttpåè®®å’Œmemcachedåè®®ã€‚ä¹Ÿå°±æ˜¯å¯ä»¥é€šè¿‡æµè§ˆå™¨æˆ–ç°æœ‰çš„memcachedå®¢æˆ·ç«¯æ¥è¿›è¡Œæ•°æ®çš„CURDæ“ä½œã€‚ 
 
-LLServer ±àÒë°²×°£º 
+ä¸‹é¢ç®€å•ä»‹ç»ä¸€ä¸‹å¦‚ä½•å®‰è£…ä½¿ç”¨LLServerã€‚ 
 
-1.°²×°libevent2.0 
+LLServer ç¼–è¯‘å®‰è£…ï¼š 
+
+1.å®‰è£…libevent2.0 
 ================================
 ulimit -SHn 65535 wget http://monkey.org/~provos/libevent-2.0.12-stable.tar.gz 
 tar zxvf libevent-2.0.12-stable.tar.gz 
@@ -25,19 +27,19 @@ cd libevent-2.0.12-stable/
 make && make install 
 cd ../ 
 
-2.Í¨¹ısvn:¿Í»§¶ËÏÂÔØleveldbµ½±¾µØleveldbÎÄ¼ş¼Ğ
+2.é€šè¿‡svn:å®¢æˆ·ç«¯ä¸‹è½½leveldbåˆ°æœ¬åœ°leveldbæ–‡ä»¶å¤¹
 =============================================
-Á´½Ó£ºhttp://leveldb.googlecode.com/svn/trunk/ »òÔİÊ±ÓÃÎÒÕâ¸ö´òºÃ°üµÄµØÖ·ÏÂÔØ£º 
+é“¾æ¥ï¼šhttp://leveldb.googlecode.com/svn/trunk/ æˆ–æš‚æ—¶ç”¨æˆ‘è¿™ä¸ªæ‰“å¥½åŒ…çš„åœ°å€ä¸‹è½½ï¼š 
 wget http://llserver.googlecode.com/files/leveldb.tar.gz 
 tar zxvf leveldb.tar.gz 
 
-Ö®ºó±àÒë°²×° cd leveldb/ 
+ä¹‹åç¼–è¯‘å®‰è£… cd leveldb/ 
 make -f Makefile 
 cp libleveldb.a /usr/local/lib/ 
 cp -rf include/ /usr/local/include/ 
 cd ../ 
 
-3.LLServerÏÂÔØµØÖ·£º
+3.LLServerä¸‹è½½åœ°å€ï¼š
 ==============================================
 wget http://llserver.googlecode.com/files/llserver-1.0.tar.gz 
 tar zxvf llserver-1.0.tar.gz 
@@ -46,14 +48,14 @@ make -f Makefile
 make install 
 cd ../ 
 
-4¡¢LLServer Ê¹ÓÃÎÄµµ\
+4ã€LLServer ä½¿ç”¨æ–‡æ¡£\
 ==============================================
 [root@~]# llserver -h 
 -l 
-<ip_addr>¼àÌıµÄIPµØÖ·£¬Ä¬ÈÏÖµÎª 0.0.0.0 -p 
-<num>¼àÌıµÄTCP¶Ë¿Ú£¨Ä¬ÈÏÖµ£º11211£© -x 
-<path>Êı¾İ¿âÄ¿Â¼£¬Ä¿Â¼²»´æÔÚ»á×Ô¶¯´´½¨£¨ÀıÈç£º/llserver/data£© -c Êı¾İ»º´æ¶ÓÁĞµ¥Î»£¬Ä¬ÈÏÎª100m -t 
-<second>HTTPÇëÇóµÄ³¬Ê±Ê±¼ä -s 1:httpĞ­Òé other:memcachedĞ­Òé -d ÒÔÊØ»¤½ø³ÌÔËĞĞ -h ÏÔÊ¾°ïÖú ¸ü¶àÄÚÈİ²Î¼û£º 
+<ip_addr>ç›‘å¬çš„IPåœ°å€ï¼Œé»˜è®¤å€¼ä¸º 0.0.0.0 -p 
+<num>ç›‘å¬çš„TCPç«¯å£ï¼ˆé»˜è®¤å€¼ï¼š11211ï¼‰ -x 
+<path>æ•°æ®åº“ç›®å½•ï¼Œç›®å½•ä¸å­˜åœ¨ä¼šè‡ªåŠ¨åˆ›å»ºï¼ˆä¾‹å¦‚ï¼š/llserver/dataï¼‰ -c æ•°æ®ç¼“å­˜é˜Ÿåˆ—å•ä½ï¼Œé»˜è®¤ä¸º100m -t 
+<second>HTTPè¯·æ±‚çš„è¶…æ—¶æ—¶é—´ -s 1:httpåè®® other:memcachedåè®® -d ä»¥å®ˆæŠ¤è¿›ç¨‹è¿è¡Œ -h æ˜¾ç¤ºå¸®åŠ© æ›´å¤šå†…å®¹å‚è§ï¼š 
 
 http://www.cnblogs.com/daizhj/archive/2011/08/23/2150422.html 
 http://www.cnblogs.com/daizhj/ 
